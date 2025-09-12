@@ -1,0 +1,10 @@
+﻿@{
+	var controller = ViewContext.RouteData.Values["controller"]?.ToString();
+	var action = ViewContext.RouteData.Values["action"]?.ToString();
+	var area = ViewContext.RouteData.Values["area"]?.ToString();
+}
+
+
+<a asp-controller="Cart" asp-action="Index" class="navbar-text ms-auto @(controller=="Cart"?"active":"")">
+	00,0 руб <i class="bi bi-cart"></i> (0)
+</a>

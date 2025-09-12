@@ -1,8 +1,45 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using WEB_353505_Horoshko.Models.ViewsModel
+@model ListDemoViewModel
+
+@{
+	ViewBag.Title = "Index";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<body>
+	<main class="container">
+		<h1>@ViewData["Head"]</h1>
+		<h2>Список</h2>
+		<div style="border-bottom: 2px solid darkgrey; margin-bottom: 10px; padding-bottom: 10px;">
+			<ol style="list-style-type:upper-alpha">
+				@for(int i = 0; i < 10; i++)
+				{
+					<li>Элемент @i списка</li>
+				}
+			</ol>
+		</div>
+		<form asp-action="Index" method="post" style="padding-bottom: 20px">
+			<h2>Форма</h2>
+			<div style="margin-left: 200px">
+				<select name="SelectedId" asp-items="Model.Items"></select>
+			</div>
+			<div style="margin-left: 200px">
+				<p><input type="checkbox" name="Check1" />Чек-бокс 1</p>
+				<p><input type="checkbox" name="Check2" />Чек-бокс 2</p>
+			</div>
+			<div style="display: flex; margin-left: 200px">
+				<p><input type="radio" name="Radio1" />Радио-1</p>
+				<p style="margin-left: 20px"><input type="radio" name="Radio2" />Радио-2</p>
+				<p style="margin-left: 20px"><input type="radio" name="Radio3" />Радио-3</p>
+			</div>
+			<div style="display: flex; padding: 5px">
+				<p>Логин:</p>
+				<p><input type="text" placeholder="Введите имя" name="Login" style="border: 2px solid darkgrey; margin-left: 150px" /></p>
+			</div>
+			<div style="display: flex; padding: 5px">
+				<p>Пароль:</p>
+				<p><input type="text" placeholder="Введите пароль" name="Password" style="border: 2px solid darkgrey; margin-left: 140px" /></p>
+			</div>
+			<button tupe="submit">Отправить</button>
+		</form>
+	</main>
+</body>
