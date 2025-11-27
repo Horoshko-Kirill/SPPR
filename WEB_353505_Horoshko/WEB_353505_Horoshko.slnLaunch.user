@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Новый профиль",
+    "Projects": [
+      {
+        "Path": "WEB_353505_Horoshko\\WEB_353505_Horoshko.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "WEB_353505_Horoshko.API\\WEB_353505_Horoshko.API.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

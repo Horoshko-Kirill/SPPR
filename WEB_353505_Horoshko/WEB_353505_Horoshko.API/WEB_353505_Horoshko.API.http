@@ -1,0 +1,6 @@
+@WEB_353505_Horoshko.API_HostAddress = http://localhost:5029
+
+GET {{WEB_353505_Horoshko.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

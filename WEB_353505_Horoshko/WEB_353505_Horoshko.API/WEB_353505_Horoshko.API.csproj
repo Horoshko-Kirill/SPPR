@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\images\КакПойматьМонстра.jpg" />
+    <Content Remove="wwwroot\images\ОбманныйБросок.jpg" />
+    <Content Remove="wwwroot\images\РасветЖатвы.jpg" />
+    <Content Remove="wwwroot\images\УжасноКатастрофическийПоходВЗоопарк.jpg" />
+    <Content Remove="wwwroot\images\ХорошихДевочекНеУбивают.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\КакПойматьМонстра.jpg" />
+    <None Include="wwwroot\images\ОбманныйБросок.jpg" />
+    <None Include="wwwroot\images\РасветЖатвы.jpg" />
+    <None Include="wwwroot\images\УжасноКатастрофическийПоходВЗоопарк.jpg" />
+    <None Include="wwwroot\images\ХорошихДевочекНеУбивают.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.5.2" />
+    <PackageReference Include="MediatR" Version="13.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WEB_353505_Horoshko.Domain\WEB_353505_Horoshko.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

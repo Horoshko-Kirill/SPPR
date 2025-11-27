@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB_353505_Horoshko", "WEB_353505_Horoshko\WEB_353505_Horoshko.csproj", "{AD83ADB3-F1FE-419F-8AC9-71C20427E3A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB_353505_Horoshko.Domain", "WEB_353505_Horoshko.Domain\WEB_353505_Horoshko.Domain.csproj", "{E7A3C672-FC91-4951-A7F0-60A6CA5369FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB_353505_Horoshko.API", "WEB_353505_Horoshko.API\WEB_353505_Horoshko.API.csproj", "{F54E6B5F-E5B2-4DD0-97EE-C27B7088AB78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{AD83ADB3-F1FE-419F-8AC9-71C20427E3A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD83ADB3-F1FE-419F-8AC9-71C20427E3A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD83ADB3-F1FE-419F-8AC9-71C20427E3A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7A3C672-FC91-4951-A7F0-60A6CA5369FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7A3C672-FC91-4951-A7F0-60A6CA5369FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7A3C672-FC91-4951-A7F0-60A6CA5369FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7A3C672-FC91-4951-A7F0-60A6CA5369FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F54E6B5F-E5B2-4DD0-97EE-C27B7088AB78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F54E6B5F-E5B2-4DD0-97EE-C27B7088AB78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F54E6B5F-E5B2-4DD0-97EE-C27B7088AB78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F54E6B5F-E5B2-4DD0-97EE-C27B7088AB78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

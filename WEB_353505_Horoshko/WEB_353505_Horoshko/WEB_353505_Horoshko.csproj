@@ -7,7 +7,30 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\images\" />
+    <Compile Remove="Media\**" />
+    <Content Remove="Media\**" />
+    <EmbeddedResource Remove="Media\**" />
+    <None Remove="Media\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\images\КакПойматьМонстра.jpg" />
+    <Content Remove="wwwroot\images\ОбманныйБросок.jpg" />
+    <Content Remove="wwwroot\images\РасветЖатвы.jpg" />
+    <Content Remove="wwwroot\images\УжасноКатастрофическийПоходВЗоопарк.jpg" />
+    <Content Remove="wwwroot\images\ХорошихДевочекНеУбивают.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\КакПойматьМонстра.jpg" />
+    <None Include="wwwroot\images\ОбманныйБросок.jpg" />
+    <None Include="wwwroot\images\РасветЖатвы.jpg" />
+    <None Include="wwwroot\images\УжасноКатастрофическийПоходВЗоопарк.jpg" />
+    <None Include="wwwroot\images\ХорошихДевочекНеУбивают.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WEB_353505_Horoshko.Domain\WEB_353505_Horoshko.Domain.csproj" />
   </ItemGroup>
 
 </Project>
