@@ -6,6 +6,7 @@ using WEB_353505_Horoshko.Extensions;
 using WEB_353505_Horoshko.HelperClasses;
 using WEB_353505_Horoshko.Models;
 using WEB_353505_Horoshko.Services.Authentication;
+using WEB_353505_Horoshko.Services.Services;
 using static System.Net.WebRequestMethods;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -54,8 +55,10 @@ builder.Services.AddHttpClient<ITokenAccessor, KeycloakTokenAccessor>();
 builder.Services.AddRazorPages()
     .AddRazorPagesOptions(options =>
     {
-        options.Conventions.AuthorizeAreaFolder("Admin", "/", "admin"); // если нужна авторизация
+        options.Conventions.AuthorizeAreaFolder("Admin", "/", "admin"); 
     });
+
+builder.Services.AddScoped<IFileService, LocalFileService>();
 
 var app = builder.Build();
 
@@ -89,6 +92,7 @@ app.Use(async (context, next) =>
     Console.WriteLine($"User roles: {roles}");
     await next();
 });
+
 
 
 app.Run();

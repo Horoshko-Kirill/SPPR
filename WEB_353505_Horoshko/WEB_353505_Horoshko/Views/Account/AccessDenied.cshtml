@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Access Denied";
+    Layout = "_Layout";
+}
+
+<style>
+    .access-container {
+        max-width: 600px;
+        margin: 80px auto;
+        padding: 40px;
+        border-radius: 20px;
+        background: #ffffff;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        text-align: center;
+        animation: fadeIn 0.6s ease-in-out;
+    }
+
+    .access-icon {
+        font-size: 80px;
+        color: #dc3545;
+    }
+
+    .access-title {
+        font-size: 32px;
+        font-weight: bold;
+        margin-top: 20px;
+        color: #333;
+    }
+
+    .access-text {
+        font-size: 18px;
+        margin: 15px 0 30px;
+        color: #555;
+    }
+
+    .btn-home {
+        padding: 12px 25px;
+        border-radius: 10px;
+        font-size: 18px;
+    }
+
+    @@keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<div class="access-container">
+    <div class="access-icon">🚫</div>
+
+    <div class="access-title">Access Denied</div>
+
+    <div class="access-text">
+        У вас нет прав для просмотра этой страницы.<br />
+        Через <strong id="sec">4</strong> секунды вы будете перенаправлены на главную страницу.
+    </div>
+
+    <a asp-controller="Home" asp-action="Index" class="btn btn-primary btn-home">
+        Перейти на главную сейчас
+    </a>
+</div>
+
+<script>
+    let sec = 4;
+    const secEl = document.getElementById("sec");
+
+    const timer = setInterval(() => {
+        sec--;
+        secEl.textContent = sec;
+
+        if (sec === 0) {
+            clearInterval(timer);
+            window.location.href = "/";
+        }
+    }, 1000);
+</script>
