@@ -22,3 +22,15 @@ C:\Users\Kirill\Desktop\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.Domain\obj\
 C:\Users\Kirill\Desktop\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.Domain\obj\Debug\net9.0\refint\WEB_353505_Horoshko.Domain.dll
 C:\Users\Kirill\Desktop\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.Domain\obj\Debug\net9.0\WEB_353505_Horoshko.Domain.pdb
 C:\Users\Kirill\Desktop\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.Domain\obj\Debug\net9.0\ref\WEB_353505_Horoshko.Domain.dll
+C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.Domain\bin\Debug\net9.0\WEB_353505_Horoshko.Domain.deps.json
+C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.Domain\bin\Debug\net9.0\WEB_353505_Horoshko.Domain.dll
+C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.Domain\bin\Debug\net9.0\WEB_353505_Horoshko.Domain.pdb
+C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.Domain\obj\Debug\net9.0\WEB_353505_Horoshko.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.Domain\obj\Debug\net9.0\WEB_353505_Horoshko.Domain.AssemblyInfoInputs.cache
+C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.Domain\obj\Debug\net9.0\WEB_353505_Horoshko.Domain.AssemblyInfo.cs
+C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.Domain\obj\Debug\net9.0\WEB_353505_Horoshko.Domain.csproj.CoreCompileInputs.cache
+C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.Domain\obj\Debug\net9.0\WEB_353505_Horoshko.Domain.sourcelink.json
+C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.Domain\obj\Debug\net9.0\WEB_353505_Horoshko.Domain.dll
+C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.Domain\obj\Debug\net9.0\refint\WEB_353505_Horoshko.Domain.dll
+C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.Domain\obj\Debug\net9.0\WEB_353505_Horoshko.Domain.pdb
+C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.Domain\obj\Debug\net9.0\ref\WEB_353505_Horoshko.Domain.dll

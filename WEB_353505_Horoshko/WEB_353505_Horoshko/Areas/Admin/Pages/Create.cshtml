@@ -1,0 +1,84 @@
+﻿@page
+@model WEB_353505_Horoshko.Areas.Admin.Pages.CreateModel
+
+        @{
+        ViewData["Title"] = "Create";
+        }
+        
+        <h1>Create</h1>
+        
+    <h4>Book</h4>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        <h5><i class="bi bi-exclamation-triangle"></i> Ошибки валидации:</h5>
+        <ul class="mb-0">
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}
+
+
+    <hr />
+    <div class="row">
+    <div class="col-md-4">
+    <form method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Book.Name" class="control-label"></label>
+                <input asp-for="Book.Name" class="form-control" />
+                <span asp-validation-for="Book.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Book.Description" class="control-label"></label>
+                <input asp-for="Book.Description" class="form-control" />
+                <span asp-validation-for="Book.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Book.CategoryId" class="control-label"></label>
+                <select asp-for="Book.CategoryId" class ="form-control" asp-items="ViewBag.CategoryId" ></select>
+            </div>
+            <div class="mb-3">
+                <label asp-for="ImageFile" class="form-label">
+                    <i class="bi bi-image"></i> Выберите изображение обложки
+                </label>
+
+                <input asp-for="ImageFile" type="file"
+                       class="form-control"
+                       accept=".jpg,.jpeg,.png,.gif,.webp,.bmp" />
+
+                <span asp-validation-for="ImageFile" class="text-danger small"></span>
+
+                <div class="form-text">
+                    Нажмите для выбора файла с вашего устройства.
+                    Поддерживаемые форматы: JPG, PNG, GIF, WebP, BMP.
+                    Максимальный размер: 10 МБ.
+                </div>
+
+                <div id="imagePreview" class="mt-2 d-none">
+                    <p class="mb-1 small text-muted">Предпросмотр:</p>
+                    <img id="previewImage" class="img-thumbnail"
+                         style="max-width: 200px; max-height: 200px;"
+                         alt="Предпросмотр выбранного изображения" />
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index" class="btn btn-secondary">
+        <i class="bi bi-arrow-left"></i> Back to List
+    </a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -12,6 +12,10 @@ namespace WEB_353505_Horoshko.API.Use_Cases
         int PageSize = 3
     ) : IRequest<ResponseData<ListModel<Book>>>;
 
+    public sealed record GetAllBooks(
+    string? CategoryNormalizedName
+    ) : IRequest<ResponseData<List<Book>>>;
+
     public class GetListOfBooksHandler : IRequestHandler<GetListOfBooks, ResponseData<ListModel<Book>>>
     {
         private readonly AppDbContext _db;
@@ -58,4 +62,36 @@ namespace WEB_353505_Horoshko.API.Use_Cases
             return ResponseData<ListModel<Book>>.Success(listModel);
         }
     }
+
+    public class GetAllBooksHandler : IRequestHandler<GetAllBooks, ResponseData<List<Book>>>
+    {
+        private readonly AppDbContext _db;
+
+        public GetAllBooksHandler(AppDbContext db)
+        {
+            _db = db;
+        }
+
+        public async Task<ResponseData<List<Book>>> Handle(GetAllBooks request, CancellationToken cancellationToken)
+        {
+            try
+            {
+                IQueryable<Book> query = _db.Books.Include(b => b.Category);
+
+                if (!string.IsNullOrEmpty(request.CategoryNormalizedName))
+                {
+                    query = query.Where(b => b.Category.NormalizedName == request.CategoryNormalizedName);
+                }
+
+                var items = await query.ToListAsync(cancellationToken);
+
+                return ResponseData<List<Book>>.Success(items);
+            }
+            catch (Exception ex)
+            {
+                return ResponseData<List<Book>>.Error(ex.Message, new List<Book>());
+            }
+        }
+    }
 }
+

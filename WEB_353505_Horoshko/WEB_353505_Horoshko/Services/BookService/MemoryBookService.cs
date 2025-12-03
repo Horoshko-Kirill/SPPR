@@ -88,5 +88,40 @@ namespace WEB_353505_Horoshko.Services.BookService
         {
             throw new NotImplementedException();
         }
+
+        public Task<ResponseData<Book>> GetBookByIdAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<ResponseData<Book>> UpdateBookAsync(int id, Book product)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<ResponseData<bool>> DeleteBookAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<ResponseData<Book>> CreateBookAsync(Book product)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<ResponseData<List<Book>>> GetAllBookListAsync(string? categoryNormalizedName = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<ResponseData<Book>> UpdateBookAsync(int id, IFormFile? file, Book product)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<ResponseData<Book>> CreateBookAsync(Book product, IFormFile? file)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

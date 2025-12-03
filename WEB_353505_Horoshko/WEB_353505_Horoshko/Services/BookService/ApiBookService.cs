@@ -1,6 +1,8 @@
-﻿using System.Text;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Text;
 using System.Text.Json;
 using WEB_353505_Horoshko.Domain.Entities;
+using WEB_353505_Horoshko.Services.Authentication;
 
 namespace WEB_353505_Horoshko.UI.Services
 {
@@ -10,15 +12,19 @@ namespace WEB_353505_Horoshko.UI.Services
         private readonly string _pageSize;
         private readonly JsonSerializerOptions _serializerOptions;
         private readonly ILogger<ApiBookService> _logger;
+        private readonly ITokenAccessor _tokenAccessor;
 
-        public ApiBookService(HttpClient httpClient, IConfiguration configuration, ILogger<ApiBookService> logger)
+        public ApiBookService(HttpClient httpClient, IConfiguration configuration, ILogger<ApiBookService> logger, ITokenAccessor tokenAccessor)
         {
             _httpClient = httpClient;
             _logger = logger;
+            _tokenAccessor = tokenAccessor;
             _pageSize = configuration.GetValue<string>("ItemsPerPage") ?? "3";
-            _serializerOptions = new JsonSerializerOptions()
+            _serializerOptions = new JsonSerializerOptions
             {
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+                PropertyNameCaseInsensitive = true,  
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                WriteIndented = true
             };
         }
 
@@ -26,8 +32,9 @@ namespace WEB_353505_Horoshko.UI.Services
         {
             try
             {
+                await _tokenAccessor.SetAuthorizationHeaderAsync(_httpClient, false);
 
-                var urlBuilder = new StringBuilder("/api/Book");
+                var urlBuilder = new StringBuilder("/api/Book/category");
 
 
                 if (!string.IsNullOrEmpty(categoryNormalizedName))
@@ -77,6 +84,9 @@ namespace WEB_353505_Horoshko.UI.Services
 
         public async Task<ResponseData<Book>> GetBookByIdAsync(int id)
         {
+
+            await _tokenAccessor.SetAuthorizationHeaderAsync(_httpClient, false);
+
             var response = await _httpClient.GetAsync($"/api/Book/{id}");
 
             if (response.IsSuccessStatusCode)
@@ -95,12 +105,31 @@ namespace WEB_353505_Horoshko.UI.Services
 
             return ResponseData<Book>.Error($"Данные не получены. Error: {response.StatusCode}");
         }
-        public async Task<ResponseData<Book>> CreateBookAsync(Book book)
+        public async Task<ResponseData<Book>> CreateBookAsync(Book book, IFormFile? file)
         {
+            try
+            {
+                await _tokenAccessor.SetAuthorizationHeaderAsync(_httpClient, false);
+            }
+            catch (Exception e)
+            {
+                return ResponseData<Book>
+                .Error($"Объект не добавлен. Error: {e.Message}");
+            }
+
+            using var content = new MultipartFormDataContent();
+
             book.Image = "Images/noimage.jpg";
 
             var json = JsonSerializer.Serialize(book, _serializerOptions);
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            content.Add(new StringContent(json, Encoding.UTF8, "application/json"), "bookJson");
+
+            if (file != null && file.Length > 0)
+            {
+                var fileContent = new StreamContent(file.OpenReadStream());
+                fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(file.ContentType);
+                content.Add(fileContent, "file", file.FileName);
+            }
 
             var response = await _httpClient.PostAsync("/api/Book", content);
 
@@ -123,10 +152,30 @@ namespace WEB_353505_Horoshko.UI.Services
             return ResponseData<Book>.Error($"Объект не добавлен. Error: {response.StatusCode}");
         }
 
-        public async Task<ResponseData<Book>> UpdateBookAsync(int id, Book book)
+        public async Task<ResponseData<Book>> UpdateBookAsync(int id, IFormFile? file, Book book)
         {
+
+            try
+            {
+                await _tokenAccessor.SetAuthorizationHeaderAsync(_httpClient, false);
+            }
+            catch (Exception e)
+            {
+                return ResponseData<Book>
+                .Error($"Объект не добавлен. Error: {e.Message}");
+            }
+
+            using var content = new MultipartFormDataContent();
+
             var json = JsonSerializer.Serialize(book, _serializerOptions);
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            content.Add(new StringContent(json, Encoding.UTF8, "application/json"), "bookJson");
+
+            if (file != null && file.Length > 0)
+            {
+                var fileContent = new StreamContent(file.OpenReadStream());
+                fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(file.ContentType);
+                content.Add(fileContent, "file", file.FileName);
+            }
 
             var response = await _httpClient.PutAsync($"/api/Book/{id}", content);
 
@@ -150,6 +199,9 @@ namespace WEB_353505_Horoshko.UI.Services
 
         public async Task<ResponseData<bool>> DeleteBookAsync(int id)
         {
+
+            await _tokenAccessor.SetAuthorizationHeaderAsync(_httpClient, false);
+
             var response = await _httpClient.DeleteAsync($"/api/Book/{id}");
 
             if (response.IsSuccessStatusCode)
@@ -160,24 +212,52 @@ namespace WEB_353505_Horoshko.UI.Services
             return ResponseData<bool>.Error($"Объект не удален. Error: {response.StatusCode}");
         }
 
-        public Task<ResponseData<Book>> GetProductByIdAsync(int id)
+        public async Task<ResponseData<List<Book>>> GetAllBookListAsync(string? categoryNormalizedName = null)
         {
-            throw new NotImplementedException();
-        }
 
-        public Task UpdateProductAsync(int id, Book product, IFormFile? formFile)
-        {
-            throw new NotImplementedException();
-        }
+            try
+            {
 
-        public Task DeleteProductAsync(int id)
-        {
-            throw new NotImplementedException();
-        }
+                await _tokenAccessor.SetAuthorizationHeaderAsync(_httpClient, false);
 
-        public Task<ResponseData<Book>> CreateProductAsync(Book product, IFormFile? formFile)
-        {
-            throw new NotImplementedException();
+                var urlBuilder = new StringBuilder("/api/Book/all");
+
+
+                if (!string.IsNullOrEmpty(categoryNormalizedName))
+                {
+                    urlBuilder.Append($"/{categoryNormalizedName}");
+                }
+
+
+
+                var finalUrl = urlBuilder.ToString();
+                _logger.LogInformation($"Запрос к URL: {_httpClient.BaseAddress}{finalUrl}");
+
+
+                var response = await _httpClient.GetAsync(finalUrl);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    try
+                    {
+                        return await response.Content
+                            .ReadFromJsonAsync<ResponseData<List<Book>>>(_serializerOptions);
+                    }
+                    catch (JsonException ex)
+                    {
+                        _logger.LogError($"Ошибка JSON: {ex.Message}");
+                        return ResponseData<List<Book>>.Error($"Ошибка: {ex.Message}");
+                    }
+                }
+
+                _logger.LogError($"HTTP ошибка: {response.StatusCode} для URL: {finalUrl}");
+                return ResponseData<List<Book>>.Error($"Данные не получены. Error: {response.StatusCode}");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Исключение: {ex.Message}");
+                return ResponseData<List<Book>>.Error($"Ошибка: {ex.Message}");
+            }
         }
     }
 }

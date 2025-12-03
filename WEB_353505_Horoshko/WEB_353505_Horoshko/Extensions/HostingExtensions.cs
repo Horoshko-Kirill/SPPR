@@ -1,4 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
+using WEB_353505_Horoshko.HelperClasses;
 using WEB_353505_Horoshko.Models;
 using WEB_353505_Horoshko.UI.Services;
 
@@ -13,6 +14,8 @@ namespace WEB_353505_Horoshko.Extensions
             builder.Services.AddHttpClient<IBookService, ApiBookService>(opt => opt.BaseAddress = new Uri(uriData.ApiUri));
 
             builder.Services.AddHttpClient<ICategoryService, ApiCategoryService>(opt => opt.BaseAddress = new Uri(uriData.ApiUri));
+
+            builder.Services.Configure<KeycloakData>(builder.Configuration.GetSection("Keycloak"));
         }
     }
 }

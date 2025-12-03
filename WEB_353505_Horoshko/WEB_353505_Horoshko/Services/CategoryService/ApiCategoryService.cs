@@ -3,6 +3,7 @@
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
+using WEB_353505_Horoshko.Services.Authentication;
 using WEB_353505_Horoshko.UI.Services;
 
 namespace WEB_353505_Horoshko.Services.CategoryService
@@ -14,11 +15,13 @@ namespace WEB_353505_Horoshko.Services.CategoryService
         private readonly string _pageSize;
         private readonly JsonSerializerOptions _serializerOptions;
         private readonly ILogger<ApiBookService> _logger;
+        private readonly ITokenAccessor _tokenAccessor;
 
-        public ApiCategoryService(HttpClient httpClient, IConfiguration configuration, ILogger<ApiBookService> logger)
+        public ApiCategoryService(HttpClient httpClient, IConfiguration configuration, ILogger<ApiBookService> logger, ITokenAccessor tokenAccessor)
         {
             _httpClient = httpClient;
             _logger = logger;
+            _tokenAccessor = tokenAccessor;
             _pageSize = configuration.GetValue<string>("ItemsPerPage") ?? "3";
             _serializerOptions = new JsonSerializerOptions()
             {
@@ -40,6 +43,8 @@ namespace WEB_353505_Horoshko.Services.CategoryService
         {
             try
             {
+                await _tokenAccessor.SetAuthorizationHeaderAsync(_httpClient, false);
+
                 var url = "/api/Categories";
 
                 var response = await _httpClient.GetAsync(url);
