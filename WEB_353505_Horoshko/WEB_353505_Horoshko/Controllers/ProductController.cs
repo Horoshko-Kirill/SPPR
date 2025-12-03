@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WEB_353505_Horoshko.Extensions;
 
 namespace WEB_353505_Horoshko.Controllers
 {
@@ -27,13 +28,21 @@ namespace WEB_353505_Horoshko.Controllers
             ViewData["categories"] = categories;
 
             string currentCategoryName = "Все";
+            string currentCategoryNormalized = "";
             if (!string.IsNullOrEmpty(category))
             {
                 var currentCategory = categories.FirstOrDefault(c => c.NormalizedName == category);
                 currentCategoryName = currentCategory?.Name ?? "Все";
+                currentCategoryNormalized = currentCategory?.NormalizedName ?? "";
             }
 
             ViewData["currentCategory"] = currentCategoryName;
+            ViewData["currentCategoryNormalized"] = currentCategoryNormalized;
+
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("_BookListPartial", bookResponse.Data);
+            }
 
             return View(bookResponse.Data);
         }
