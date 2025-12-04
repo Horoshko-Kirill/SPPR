@@ -3,7 +3,7 @@
     "Name": "Новый профиль",
     "Projects": [
       {
-        "Path": "WEB_353505_Horoshko\\WEB_353505_Horoshko.csproj",
+        "Path": "WEB_353505_Horoshko\\WEB_353505_Horoshko.UI.csproj",
         "Action": "Start"
       },
       {

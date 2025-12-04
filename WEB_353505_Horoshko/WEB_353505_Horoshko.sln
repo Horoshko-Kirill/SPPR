@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
 VisualStudioVersion = 18.0.11222.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB_353505_Horoshko", "WEB_353505_Horoshko\WEB_353505_Horoshko.csproj", "{AD83ADB3-F1FE-419F-8AC9-71C20427E3A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB_353505_Horoshko.UI", "WEB_353505_Horoshko\WEB_353505_Horoshko.UI.csproj", "{AD83ADB3-F1FE-419F-8AC9-71C20427E3A0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB_353505_Horoshko.Domain", "WEB_353505_Horoshko.Domain\WEB_353505_Horoshko.Domain.csproj", "{E7A3C672-FC91-4951-A7F0-60A6CA5369FC}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{FBDFE1E8-8732-4B90-B5E8-297AA8AE519D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB_353505_Horoshko.Blazor.SSR", "WEB_353505_Horoshko.Blazor.SSR\WEB_353505_Horoshko.Blazor.SSR.csproj", "{6F252FE3-A848-4810-9387-592DFF869758}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB_353505_Horoshko.BlazorWasm", "WEB_353505_Horoshko.BlazorWasm\WEB_353505_Horoshko.BlazorWasm.csproj", "{DC2BF170-1045-4BF7-8521-986CDC1DB39D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{6F252FE3-A848-4810-9387-592DFF869758}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F252FE3-A848-4810-9387-592DFF869758}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F252FE3-A848-4810-9387-592DFF869758}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC2BF170-1045-4BF7-8521-986CDC1DB39D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC2BF170-1045-4BF7-8521-986CDC1DB39D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC2BF170-1045-4BF7-8521-986CDC1DB39D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC2BF170-1045-4BF7-8521-986CDC1DB39D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

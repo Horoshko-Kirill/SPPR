@@ -19,7 +19,7 @@
   <ItemGroup>
     <ProjectReference Include="..\WEB_353505_Horoshko.API\WEB_353505_Horoshko.API.csproj" />
     <ProjectReference Include="..\WEB_353505_Horoshko.Domain\WEB_353505_Horoshko.Domain.csproj" />
-    <ProjectReference Include="..\WEB_353505_Horoshko\WEB_353505_Horoshko.csproj" />
+    <ProjectReference Include="..\WEB_353505_Horoshko\WEB_353505_Horoshko.UI.csproj" />
   </ItemGroup>
 
   <ItemGroup>

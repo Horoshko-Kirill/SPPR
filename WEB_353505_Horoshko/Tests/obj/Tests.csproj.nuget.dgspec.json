@@ -38,8 +38,8 @@
               "C:\\Users\\kiril\\Desktop\\SPPR\\SPPR\\WEB_353505_Horoshko\\WEB_353505_Horoshko.Domain\\WEB_353505_Horoshko.Domain.csproj": {
                 "projectPath": "C:\\Users\\kiril\\Desktop\\SPPR\\SPPR\\WEB_353505_Horoshko\\WEB_353505_Horoshko.Domain\\WEB_353505_Horoshko.Domain.csproj"
               },
-              "C:\\Users\\kiril\\Desktop\\SPPR\\SPPR\\WEB_353505_Horoshko\\WEB_353505_Horoshko\\WEB_353505_Horoshko.csproj": {
-                "projectPath": "C:\\Users\\kiril\\Desktop\\SPPR\\SPPR\\WEB_353505_Horoshko\\WEB_353505_Horoshko\\WEB_353505_Horoshko.csproj"
+              "C:\\Users\\kiril\\Desktop\\SPPR\\SPPR\\WEB_353505_Horoshko\\WEB_353505_Horoshko\\WEB_353505_Horoshko.UI.csproj": {
+                "projectPath": "C:\\Users\\kiril\\Desktop\\SPPR\\SPPR\\WEB_353505_Horoshko\\WEB_353505_Horoshko\\WEB_353505_Horoshko.UI.csproj"
               }
             }
           }
@@ -1251,12 +1251,12 @@
         }
       }
     },
-    "C:\\Users\\kiril\\Desktop\\SPPR\\SPPR\\WEB_353505_Horoshko\\WEB_353505_Horoshko\\WEB_353505_Horoshko.csproj": {
+    "C:\\Users\\kiril\\Desktop\\SPPR\\SPPR\\WEB_353505_Horoshko\\WEB_353505_Horoshko\\WEB_353505_Horoshko.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kiril\\Desktop\\SPPR\\SPPR\\WEB_353505_Horoshko\\WEB_353505_Horoshko\\WEB_353505_Horoshko.csproj",
-        "projectName": "WEB_353505_Horoshko",
-        "projectPath": "C:\\Users\\kiril\\Desktop\\SPPR\\SPPR\\WEB_353505_Horoshko\\WEB_353505_Horoshko\\WEB_353505_Horoshko.csproj",
+        "projectUniqueName": "C:\\Users\\kiril\\Desktop\\SPPR\\SPPR\\WEB_353505_Horoshko\\WEB_353505_Horoshko\\WEB_353505_Horoshko.UI.csproj",
+        "projectName": "WEB_353505_Horoshko.UI",
+        "projectPath": "C:\\Users\\kiril\\Desktop\\SPPR\\SPPR\\WEB_353505_Horoshko\\WEB_353505_Horoshko\\WEB_353505_Horoshko.UI.csproj",
         "packagesPath": "C:\\Users\\kiril\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\kiril\\Desktop\\SPPR\\SPPR\\WEB_353505_Horoshko\\WEB_353505_Horoshko\\obj\\",
         "projectStyle": "PackageReference",

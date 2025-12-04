@@ -3644,33 +3644,6 @@
           "build/net8.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "WEB_353505_Horoshko/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v10.0",
-        "dependencies": {
-          "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.0",
-          "Microsoft.AspNetCore.Authentication.OpenIdConnect": "10.0.0",
-          "Microsoft.EntityFrameworkCore": "10.0.0",
-          "Microsoft.EntityFrameworkCore.Sqlite": "10.0.0",
-          "Microsoft.Extensions.Caching.Hybrid": "10.0.0",
-          "Microsoft.Extensions.Caching.StackExchangeRedis": "10.0.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "10.0.0-rc.1.25458.5",
-          "Serilog.AspNetCore": "10.0.0",
-          "Serilog.Settings.Configuration": "10.0.0",
-          "Serilog.Sinks.Console": "6.1.1",
-          "Serilog.Sinks.File": "7.0.0",
-          "WEB_353505_Horoshko.Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/WEB_353505_Horoshko.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/WEB_353505_Horoshko.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
       "WEB_353505_Horoshko.API/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -3706,6 +3679,33 @@
         "runtime": {
           "bin/placeholder/WEB_353505_Horoshko.Domain.dll": {}
         }
+      },
+      "WEB_353505_Horoshko.UI/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.0",
+          "Microsoft.AspNetCore.Authentication.OpenIdConnect": "10.0.0",
+          "Microsoft.EntityFrameworkCore": "10.0.0",
+          "Microsoft.EntityFrameworkCore.Sqlite": "10.0.0",
+          "Microsoft.Extensions.Caching.Hybrid": "10.0.0",
+          "Microsoft.Extensions.Caching.StackExchangeRedis": "10.0.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "10.0.0-rc.1.25458.5",
+          "Serilog.AspNetCore": "10.0.0",
+          "Serilog.Settings.Configuration": "10.0.0",
+          "Serilog.Sinks.Console": "6.1.1",
+          "Serilog.Sinks.File": "7.0.0",
+          "WEB_353505_Horoshko.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WEB_353505_Horoshko.UI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WEB_353505_Horoshko.UI.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -9354,11 +9354,6 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "WEB_353505_Horoshko/1.0.0": {
-      "type": "project",
-      "path": "../WEB_353505_Horoshko/WEB_353505_Horoshko.csproj",
-      "msbuildProject": "../WEB_353505_Horoshko/WEB_353505_Horoshko.csproj"
-    },
     "WEB_353505_Horoshko.API/1.0.0": {
       "type": "project",
       "path": "../WEB_353505_Horoshko.API/WEB_353505_Horoshko.API.csproj",
@@ -9368,6 +9363,11 @@
       "type": "project",
       "path": "../WEB_353505_Horoshko.Domain/WEB_353505_Horoshko.Domain.csproj",
       "msbuildProject": "../WEB_353505_Horoshko.Domain/WEB_353505_Horoshko.Domain.csproj"
+    },
+    "WEB_353505_Horoshko.UI/1.0.0": {
+      "type": "project",
+      "path": "../WEB_353505_Horoshko/WEB_353505_Horoshko.UI.csproj",
+      "msbuildProject": "../WEB_353505_Horoshko/WEB_353505_Horoshko.UI.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -9375,9 +9375,9 @@
       "Microsoft.NET.Test.Sdk >= 17.14.1",
       "Moq >= 4.20.72",
       "NSubstitute >= 5.3.0",
-      "WEB_353505_Horoshko >= 1.0.0",
       "WEB_353505_Horoshko.API >= 1.0.0",
       "WEB_353505_Horoshko.Domain >= 1.0.0",
+      "WEB_353505_Horoshko.UI >= 1.0.0",
       "coverlet.collector >= 6.0.4",
       "xunit >= 2.9.3",
       "xunit.runner.visualstudio >= 3.1.4"
@@ -9421,8 +9421,8 @@
             "C:\\Users\\kiril\\Desktop\\SPPR\\SPPR\\WEB_353505_Horoshko\\WEB_353505_Horoshko.Domain\\WEB_353505_Horoshko.Domain.csproj": {
               "projectPath": "C:\\Users\\kiril\\Desktop\\SPPR\\SPPR\\WEB_353505_Horoshko\\WEB_353505_Horoshko.Domain\\WEB_353505_Horoshko.Domain.csproj"
             },
-            "C:\\Users\\kiril\\Desktop\\SPPR\\SPPR\\WEB_353505_Horoshko\\WEB_353505_Horoshko\\WEB_353505_Horoshko.csproj": {
-              "projectPath": "C:\\Users\\kiril\\Desktop\\SPPR\\SPPR\\WEB_353505_Horoshko\\WEB_353505_Horoshko\\WEB_353505_Horoshko.csproj"
+            "C:\\Users\\kiril\\Desktop\\SPPR\\SPPR\\WEB_353505_Horoshko\\WEB_353505_Horoshko\\WEB_353505_Horoshko.UI.csproj": {
+              "projectPath": "C:\\Users\\kiril\\Desktop\\SPPR\\SPPR\\WEB_353505_Horoshko\\WEB_353505_Horoshko\\WEB_353505_Horoshko.UI.csproj"
             }
           }
         }

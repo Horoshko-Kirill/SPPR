@@ -1,0 +1,48 @@
+﻿@page "/books"
+@inject IBookService BookService
+
+<h3>Список книг</h3>
+
+@if (isLoading)
+{
+    <p>Загрузка...</p>
+}
+else if (errorMessage is not null)
+{
+    <div class="text-danger">@errorMessage</div>
+}
+else if (books is null || books.Count == 0)
+{
+    <p>Нет данных</p>
+}
+else
+{
+    <ul class="list-group">
+        @foreach (var book in books)
+        {
+            <li class="list-group-item">@book.Name</li>
+        }
+    </ul>
+}
+
+@code {
+    private List<Book>? books;
+    private bool isLoading = true;
+    private string? errorMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var result = await BookService.GetAllBookListAsync();
+
+        if (result.Successful && result.Data is not null)
+        {
+            books = result.Data;
+        }
+        else
+        {
+            errorMessage = result.ErrorMessage ?? "Ошибка загрузки";
+        }
+
+        isLoading = false;
+    }
+}
