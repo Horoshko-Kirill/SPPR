@@ -5,6 +5,7 @@ using System.Security.Claims;
 using WEB_353505_Horoshko.API.Data;
 using WEB_353505_Horoshko.API.EndPoints;
 using WEB_353505_Horoshko.API.Models;
+using WEB_353505_Horoshko.Domain.Help;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,8 @@ builder.Services.AddMediatR(typeof(Program).Assembly);
 var connectionString = builder.Configuration.GetConnectionString("Postgres");
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(connectionString));
+
+builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddHttpContextAccessor();
 
@@ -68,6 +71,13 @@ builder.Services.AddAuthorization(opt =>
 {
     opt.AddPolicy("admin", p => p.RequireRole("POWER-USER"));
 
+});
+
+builder.Services.AddHybridCache();
+builder.Services.AddStackExchangeRedisCache(opt =>
+{
+    opt.InstanceName = "labs_";
+    opt.Configuration = builder.Configuration["Redis"];
 });
 
 var app = builder.Build();

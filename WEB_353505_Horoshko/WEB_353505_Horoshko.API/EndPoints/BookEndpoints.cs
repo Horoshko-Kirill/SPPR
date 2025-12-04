@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OpenApi;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Hybrid;
 using System.Text.Json;
 using WEB_353505_Horoshko.API.Data;
 using WEB_353505_Horoshko.API.Use_Cases;
@@ -39,12 +40,22 @@ public static class BookEndpoints
             });
         })
         .WithName("GetBookById")
-        .WithOpenApi();
+        .WithOpenApi()
+        .AllowAnonymous();
 
         group.MapGet("/category/{category:regex(^[a-zA-Z0-9-]*$)?}",
-            async (IMediator mediator, string? category, int pageNo = 1, int pageSize = 3) =>
+        async (IMediator mediator, HybridCache cache, string? category, int pageNo = 1, int pageSize = 3) =>
         {
-            var data = await mediator.Send(new GetListOfBooks(category, pageNo, pageSize));
+            string cacheKey = $"books_{category}_{pageNo}";
+
+            var data = await cache.GetOrCreateAsync(cacheKey,
+                async token => await mediator.Send(new GetListOfBooks(category, pageNo, pageSize)),
+                options: new HybridCacheEntryOptions
+                {
+                    LocalCacheExpiration = TimeSpan.FromSeconds(30),  
+                    Expiration = TimeSpan.FromMinutes(1)       
+                });
+
             return TypedResults.Ok(data);
         })
         .WithName("GetBooks")
@@ -52,17 +63,27 @@ public static class BookEndpoints
         .AllowAnonymous();
 
         group.MapGet("/all/{category:regex(^[a-zA-Z0-9-]*$)?}",
-            async (IMediator mediator, string? category) =>
+        async (IMediator mediator, HybridCache cache, string? category) =>
+        {
+            string cacheKey = $"books_all_{category}";
+
+            var data = await cache.GetOrCreateAsync(cacheKey,
+               async token => await mediator.Send(new GetAllBooks(category)),
+               options: new HybridCacheEntryOptions
             {
-                var data = await mediator.Send(new GetAllBooks(category));
-                return TypedResults.Ok(data);
-            })
+                LocalCacheExpiration = TimeSpan.FromSeconds(30),
+                Expiration = TimeSpan.FromMinutes(1)
+            });
+
+            return TypedResults.Ok(data);
+        })
         .WithName("GetAllBooks")
         .WithOpenApi()
         .AllowAnonymous();
 
 
-        group.MapPut("/{id}", async Task<Results<Ok, NotFound>> (int id, [FromForm] string bookJson, [FromForm] IFormFile? file, AppDbContext db, IMediator mediator) =>
+
+        group.MapPut("/{id}", async Task<Results<Ok, NotFound>> (int id, [FromForm] string bookJson, [FromForm] IFormFile? file, AppDbContext db, IMediator mediator, HybridCache cache) =>
         {
 
             var book = JsonSerializer.Deserialize<Book>(bookJson, new JsonSerializerOptions
@@ -102,13 +123,17 @@ public static class BookEndpoints
                         .SetProperty(m => m.Description, book.Description)
                         .SetProperty(m => m.CategoryId, book.CategoryId)
                         .SetProperty(m => m.Image, book.Image)
+                        .SetProperty(m => m.Price, book.Price)
                         );
+
+            await ClearBookCache(cache, db);
+
             return affected == 1 ? TypedResults.Ok() : TypedResults.NotFound();
         })
         .WithName("UpdateBook")
         .WithOpenApi();
 
-        group.MapPost("/", async ([FromForm] string bookJson, [FromForm] IFormFile? file, AppDbContext db, IMediator mediator) =>
+        group.MapPost("/", async ([FromForm] string bookJson, [FromForm] IFormFile? file, AppDbContext db, IMediator mediator, HybridCache cache) =>
         {
 
             var book = JsonSerializer.Deserialize<Book>(bookJson, new JsonSerializerOptions
@@ -124,12 +149,15 @@ public static class BookEndpoints
 
             db.Books.Add(book);
             await db.SaveChangesAsync();
+
+            await ClearBookCache(cache, db);
+
             return TypedResults.Created($"/api/Book/{book.Id}",book);
         })
         .WithName("CreateBook")
         .WithOpenApi();
 
-        group.MapDelete("/{id}", async Task<Results<Ok, NotFound>> (int id, AppDbContext db, IMediator mediator) =>
+        group.MapDelete("/{id}", async Task<Results<Ok, NotFound>> (int id, AppDbContext db, IMediator mediator, HybridCache cache) =>
         {
 
             var book = await db.Books
@@ -148,9 +176,35 @@ public static class BookEndpoints
                 .Where(model => model.Id == id)
                 .ExecuteDeleteAsync();
 
+            await ClearBookCache(cache, db);
+
             return affected == 1 ? TypedResults.Ok() : TypedResults.NotFound();
         })
         .WithName("DeleteBook")
         .WithOpenApi();
     }
+
+    private static async Task ClearBookCache(HybridCache cache, AppDbContext db)
+    {
+        var categories = await db.Categories
+            .AsNoTracking()
+            .Select(c => c.NormalizedName)
+            .ToListAsync();
+
+
+        foreach (var category in categories)
+        {
+            for (int page = 1; page <= 20; page++) 
+            {
+                await cache.RemoveAsync($"books_{category}_{page}");
+            }
+
+
+            await cache.RemoveAsync($"books_all_{category}");
+        }
+
+        await cache.RemoveAsync("books__1");
+        await cache.RemoveAsync("books_all_");
+    }
+
 }

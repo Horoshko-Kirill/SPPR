@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "cWJ6QFOlNA0=",
+  "dgSpecHash": "XeLzyYYdz0Q=",
   "success": true,
   "projectFilePath": "C:\\Users\\kiril\\Desktop\\SPPR\\SPPR\\WEB_353505_Horoshko\\WEB_353505_Horoshko.API\\WEB_353505_Horoshko.API.csproj",
   "expectedPackageFiles": [
@@ -83,6 +83,8 @@
     "C:\\Users\\kiril\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.7\\microsoft.entityframeworkcore.relational.8.0.7.nupkg.sha512",
     "C:\\Users\\kiril\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\8.0.7\\microsoft.entityframeworkcore.tools.8.0.7.nupkg.sha512",
     "C:\\Users\\kiril\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\kiril\\.nuget\\packages\\microsoft.extensions.caching.hybrid\\10.0.0\\microsoft.extensions.caching.hybrid.10.0.0.nupkg.sha512",
+    "C:\\Users\\kiril\\.nuget\\packages\\microsoft.extensions.caching.stackexchangeredis\\10.0.0\\microsoft.extensions.caching.stackexchangeredis.10.0.0.nupkg.sha512",
     "C:\\Users\\kiril\\.nuget\\packages\\microsoft.extensions.dependencymodel\\9.0.0-rc.2.24473.5\\microsoft.extensions.dependencymodel.9.0.0-rc.2.24473.5.nupkg.sha512",
     "C:\\Users\\kiril\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.0.1\\microsoft.identitymodel.abstractions.8.0.1.nupkg.sha512",
     "C:\\Users\\kiril\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.0.1\\microsoft.identitymodel.jsonwebtokens.8.0.1.nupkg.sha512",
@@ -112,6 +114,8 @@
     "C:\\Users\\kiril\\.nuget\\packages\\nuget.projectmodel\\6.11.0\\nuget.projectmodel.6.11.0.nupkg.sha512",
     "C:\\Users\\kiril\\.nuget\\packages\\nuget.protocol\\6.11.0\\nuget.protocol.6.11.0.nupkg.sha512",
     "C:\\Users\\kiril\\.nuget\\packages\\nuget.versioning\\6.11.0\\nuget.versioning.6.11.0.nupkg.sha512",
+    "C:\\Users\\kiril\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "C:\\Users\\kiril\\.nuget\\packages\\stackexchange.redis\\2.7.27\\stackexchange.redis.2.7.27.nupkg.sha512",
     "C:\\Users\\kiril\\.nuget\\packages\\swashbuckle.aspnetcore\\6.9.0\\swashbuckle.aspnetcore.6.9.0.nupkg.sha512",
     "C:\\Users\\kiril\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.9.0\\swashbuckle.aspnetcore.swagger.6.9.0.nupkg.sha512",
     "C:\\Users\\kiril\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.9.0\\swashbuckle.aspnetcore.swaggergen.6.9.0.nupkg.sha512",

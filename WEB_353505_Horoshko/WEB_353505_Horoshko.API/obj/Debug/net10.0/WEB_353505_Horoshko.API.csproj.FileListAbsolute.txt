@@ -2376,7 +2376,6 @@ C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.API\obj
 C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.API\obj\Debug\net10.0\WEB_353505_Horoshko.API.pdb
 C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.API\obj\Debug\net10.0\WEB_353505_Horoshko.API.genruntimeconfig.cache
 C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.API\obj\Debug\net10.0\ref\WEB_353505_Horoshko.API.dll
-C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.API\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.API\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
 C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.API\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
@@ -2385,3 +2384,8 @@ C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.API\bin
 C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.API\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.API\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.API\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.API\bin\Debug\net10.0\Microsoft.Extensions.Caching.Hybrid.dll
+C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.API\bin\Debug\net10.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.API\bin\Debug\net10.0\Pipelines.Sockets.Unofficial.dll
+C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.API\bin\Debug\net10.0\StackExchange.Redis.dll
+C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko.API\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

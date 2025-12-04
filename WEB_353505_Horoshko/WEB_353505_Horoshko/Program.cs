@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using System.Security.Claims;
+using WEB_353505_Horoshko.API.Models;
+using WEB_353505_Horoshko.Domain.Help;
 using WEB_353505_Horoshko.Extensions;
 using WEB_353505_Horoshko.HelperClasses;
 using WEB_353505_Horoshko.Models;
@@ -60,6 +62,20 @@ builder.Services.AddRazorPages()
 
 builder.Services.AddScoped<IFileService, LocalFileService>();
 
+
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession();
+
+builder.Services.AddScoped<Cart, SessionCart>();
+
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+
 var app = builder.Build();
 
 
@@ -83,6 +99,8 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}"
 );
+
+app.UseSession();
 
 app.Use(async (context, next) =>
 {

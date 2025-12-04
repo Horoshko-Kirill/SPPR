@@ -8,26 +8,21 @@
                 <div class="border rounded p-2">
                     <ul class="nav">
                         <li class="nav-item dropdown">
-                            <!-- Заголовок текущей категории -->
                             <a class="nav-link dropdown-toggle"
                                data-bs-toggle="dropdown"
                                href="#"
                                role="button"
-                               aria-expanded="false"
-                               id="currentCategoryName">
+                               aria-expanded="false">
                                 @(ViewData["currentCategory"]?.ToString())
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item category-link" data-category="" data-name="Все" href="#">Все</a>
+                                    <a class="dropdown-item category-link" data-category="" href="#">Все</a>
                                 </li>
                                 @foreach (var item in (IEnumerable<Category>)ViewData["categories"])
                                 {
                                     <li>
-                                        <a class="dropdown-item category-link"
-                                           data-category="@item.NormalizedName"
-                                           data-name="@item.Name"
-                                           href="#">@item.Name</a>
+                                        <a class="dropdown-item category-link" data-category="@item.NormalizedName" href="#">@item.Name</a>
                                     </li>
                                 }
                             </ul>

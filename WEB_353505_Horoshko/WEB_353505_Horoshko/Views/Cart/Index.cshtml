@@ -1,0 +1,54 @@
+﻿@model List<WEB_353505_Horoshko.Domain.Entities.CartItem>
+
+@{
+    ViewData["Title"] = "Корзина";
+}
+
+<h2>Корзина</h2>
+
+@if (!Model.Any())
+{
+    <p>Корзина пуста.</p>
+}
+else
+{
+    <table class="table table-striped align-middle">
+        <thead>
+            <tr>
+                <th>Изображение</th>
+                <th>Название книги</th>
+                <th>Цена</th>
+                <th>Количество</th>
+                <th>Сумма</th>
+                <th>Действия</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <img src="@item.Item.Image" alt="@item.Item.Name" style="height:80px; object-fit:cover;" />
+                    </td>
+                    <td>@item.Item.Name</td>
+                    <td>@item.Item.Price.ToString("C")</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.TotalPrice.ToString("C")</td>
+                    <td>
+                        <a asp-action="Remove" asp-route-id="@item.Item.Id" class="btn btn-sm btn-danger">
+                            <i class="bi bi-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4" class="text-end"><strong>Итого:</strong></td>
+                <td colspan="2">
+                    @Model.Sum(x => x.TotalPrice).ToString("C")
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+}

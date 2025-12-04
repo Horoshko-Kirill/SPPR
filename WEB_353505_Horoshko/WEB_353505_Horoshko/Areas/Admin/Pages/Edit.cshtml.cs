@@ -37,7 +37,7 @@ namespace WEB_353505_Horoshko.Areas.Admin.Pages
             }
 
             var book = await _bookService.GetBookByIdAsync((int)id);
-            Console.WriteLine(book.Data);
+            Console.WriteLine(book.Data); 
             if (book == null || book.Data == null)
             {
                 Console.WriteLine("2");

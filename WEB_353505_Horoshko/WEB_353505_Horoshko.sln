@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB_353505_Horoshko.Domain"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEB_353505_Horoshko.API", "WEB_353505_Horoshko.API\WEB_353505_Horoshko.API.csproj", "{F54E6B5F-E5B2-4DD0-97EE-C27B7088AB78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{FBDFE1E8-8732-4B90-B5E8-297AA8AE519D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F54E6B5F-E5B2-4DD0-97EE-C27B7088AB78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F54E6B5F-E5B2-4DD0-97EE-C27B7088AB78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F54E6B5F-E5B2-4DD0-97EE-C27B7088AB78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBDFE1E8-8732-4B90-B5E8-297AA8AE519D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBDFE1E8-8732-4B90-B5E8-297AA8AE519D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBDFE1E8-8732-4B90-B5E8-297AA8AE519D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBDFE1E8-8732-4B90-B5E8-297AA8AE519D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

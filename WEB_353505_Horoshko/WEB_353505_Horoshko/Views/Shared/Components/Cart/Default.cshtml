@@ -1,10 +1,11 @@
-﻿@{
-	var controller = ViewContext.RouteData.Values["controller"]?.ToString();
-	var action = ViewContext.RouteData.Values["action"]?.ToString();
-	var area = ViewContext.RouteData.Values["area"]?.ToString();
+﻿@using WEB_353505_Horoshko.Domain.Help
+@{
+    var controller = ViewContext.RouteData.Values["controller"]?.ToString();
 }
+
+@inject Cart _cart
 
 
 <a asp-controller="Cart" asp-action="Index" class="navbar-text ms-auto @(controller=="Cart"?"active":"")">
-	00,0 руб <i class="bi bi-cart"></i> (0)
+    @(_cart?.TotalPrice.ToString("C") ?? "0,00 руб") <i class="bi bi-cart"></i> (@(_cart?.Count ?? 0))
 </a>

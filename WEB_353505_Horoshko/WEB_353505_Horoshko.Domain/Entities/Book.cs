@@ -27,5 +27,8 @@ namespace WEB_353505_Horoshko.Domain.Entities
 
         [Display(Name = "Image")]
         public string? Image { get; set; }
+
+        [Display(Name = "Price")]
+        public decimal Price { get; set; }
     }
 }

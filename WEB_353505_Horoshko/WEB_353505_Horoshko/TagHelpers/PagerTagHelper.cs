@@ -83,10 +83,11 @@ namespace WEB_353505_Horoshko.TagHelpers
             }
             else
             {
-                return $"/Product/Index?pageNo={page}&category={Uri.EscapeDataString(Category ?? "")}";
+                if (string.IsNullOrEmpty(Category))
+                    return $"/Catalog?pageNo={page}";
+                return $"/Catalog/{Uri.EscapeDataString(Category)}?pageNo={page}";
             }
         }
-
 
     }
 }

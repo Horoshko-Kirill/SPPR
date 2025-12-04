@@ -3,6 +3,7 @@ using WEB_353505_Horoshko.Extensions;
 
 namespace WEB_353505_Horoshko.Controllers
 {
+    [Route("Catalog")]
     public class ProductController : Controller
     {
         private IBookService _bookService;
@@ -14,6 +15,7 @@ namespace WEB_353505_Horoshko.Controllers
             _categoryService = categoryService;
         }
 
+        [Route("{category?}")]
         public async Task<IActionResult> Index(string? category, int pageNo = 1)
         {
             var bookResponse = await _bookService.GetBookListAsync(category, pageNo);
