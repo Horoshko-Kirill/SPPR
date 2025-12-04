@@ -1,0 +1,58 @@
+﻿@page "/counter"
+@page "/counter/{Start:int}"
+@using System.ComponentModel.DataAnnotations
+@rendermode InteractiveServer
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary mb-3" @onclick="IncrementCount">Click me</button>
+
+<EditForm Model="@model" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="mb-3">
+        <label>Set counter value (1–10):</label>
+        <InputNumber @bind-Value="model.Value" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-success">Установить</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public int? Start { get; set; }
+
+    private int currentCount = 0;
+
+    private CounterModel model = new();
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+
+    private void OnValidSubmit()
+    {
+        currentCount = model.Value;
+    }
+
+    protected override void OnInitialized()
+    {
+        if (Start.HasValue && Start.Value >= 1 && Start.Value <= 10)
+        {
+            currentCount = Start.Value;
+        }
+    }
+
+    public class CounterModel
+    {
+        [Range(1, 10, ErrorMessage = "Введите число от 1 до 10")]
+        public int Value { get; set; }
+    }
+}

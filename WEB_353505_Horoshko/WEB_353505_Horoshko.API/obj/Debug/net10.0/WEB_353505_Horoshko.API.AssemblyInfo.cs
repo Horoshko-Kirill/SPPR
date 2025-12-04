@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WEB_353505_Horoshko.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1bca51207abbb3b85b51ea8ab4beecff52887cbd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+35eedcac8036fbeef1e1e2d4a26b22cfbaf7d39b")]
 [assembly: System.Reflection.AssemblyProductAttribute("WEB_353505_Horoshko.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WEB_353505_Horoshko.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,0 +1,100 @@
+2025-12-05 01:03:11.005 +03:00 [INF] User profile is available. Using 'C:\Users\kiril\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-05 01:03:11.400 +03:00 [INF] Now listening on: https://localhost:7001
+2025-12-05 01:03:11.404 +03:00 [INF] Now listening on: http://localhost:5001
+2025-12-05 01:03:11.437 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-05 01:03:11.439 +03:00 [INF] Hosting environment: Development
+2025-12-05 01:03:11.440 +03:00 [INF] Content root path: C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko
+2025-12-05 01:03:12.149 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/ - null null
+2025-12-05 01:03:12.399 +03:00 [INF] Executing endpoint 'WEB_353505_Horoshko.Controllers.HomeController.Index (WEB_353505_Horoshko)'
+2025-12-05 01:03:12.448 +03:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller WEB_353505_Horoshko.Controllers.HomeController (WEB_353505_Horoshko).
+2025-12-05 01:03:12.462 +03:00 [INF] Executing ViewResult, running view Index.
+2025-12-05 01:03:12.653 +03:00 [INF] Accessing expired session, Key:e4710eb9-5be8-89af-ebdf-af437f996a37
+2025-12-05 01:03:12.699 +03:00 [INF] Executed ViewResult - view Index executed in 239.4175ms.
+2025-12-05 01:03:12.706 +03:00 [INF] Executed action WEB_353505_Horoshko.Controllers.HomeController.Index (WEB_353505_Horoshko) in 254.1348ms
+2025-12-05 01:03:12.709 +03:00 [INF] Executed endpoint 'WEB_353505_Horoshko.Controllers.HomeController.Index (WEB_353505_Horoshko)'
+2025-12-05 01:03:12.718 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2025-12-05 01:03:12.720 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/ - 200 null text/html; charset=utf-8 577.4142ms
+2025-12-05 01:03:12.762 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/js/site.js?v=L7UdMxknnWtXgkmz3xZMVU9_6IKVEyQ77uNgxlAO-_g - null null
+2025-12-05 01:03:12.752 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/lib/font-awesome/css/ all.min.css - null null
+2025-12-05 01:03:12.718 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/css/site.css?v=CGtptq4uN505h64V6KPcGLJ7wKQwgPuQqXlBDMWRgso - null null
+2025-12-05 01:03:12.751 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/WebLabs_BSUIR_V02.styles.css - null null
+2025-12-05 01:03:12.810 +03:00 [INF] The file /js/site.js was not modified
+2025-12-05 01:03:12.806 +03:00 [INF] The file /lib/bootstrap/dist/css/bootstrap.min.css was not modified
+2025-12-05 01:03:12.816 +03:00 [INF] The file /css/site.css was not modified
+2025-12-05 01:03:12.758 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/lib/jquery/dist/jquery.min.js - null null
+2025-12-05 01:03:12.762 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2025-12-05 01:03:12.766 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/js/cart.js - null null
+2025-12-05 01:03:12.799 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-05 01:03:12.803 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/_vs/browserLink - null null
+2025-12-05 01:03:12.848 +03:00 [INF] ---> request /lib/font-awesome/css/%20all.min.css returns 404
+2025-12-05 01:03:12.857 +03:00 [INF] ---> request /WebLabs_BSUIR_V02.styles.css returns 404
+2025-12-05 01:03:12.884 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/_framework/aspnetcore-browser-refresh.js - 200 16523 application/javascript; charset=utf-8 84.9837ms
+2025-12-05 01:03:12.858 +03:00 [INF] ---> request /js/site.js returns 304
+2025-12-05 01:03:12.861 +03:00 [INF] ---> request /lib/bootstrap/dist/css/bootstrap.min.css returns 304
+2025-12-05 01:03:12.888 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/lib/font-awesome/css/ all.min.css - 404 0 null 137.0128ms
+2025-12-05 01:03:12.863 +03:00 [INF] ---> request /css/site.css returns 304
+2025-12-05 01:03:12.870 +03:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2025-12-05 01:03:12.873 +03:00 [INF] The file /lib/bootstrap/dist/js/bootstrap.bundle.min.js was not modified
+2025-12-05 01:03:12.878 +03:00 [INF] The file /js/cart.js was not modified
+2025-12-05 01:03:12.890 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/WebLabs_BSUIR_V02.styles.css - 404 0 null 139.0477ms
+2025-12-05 01:03:12.896 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/js/site.js?v=L7UdMxknnWtXgkmz3xZMVU9_6IKVEyQ77uNgxlAO-_g - 304 null text/javascript 134.0238ms
+2025-12-05 01:03:12.897 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/lib/bootstrap/dist/css/bootstrap.min.css - 304 null text/css 178.7594ms
+2025-12-05 01:03:12.901 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7001/lib/font-awesome/css/%20all.min.css, Response status code: 404
+2025-12-05 01:03:12.903 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/css/site.css?v=CGtptq4uN505h64V6KPcGLJ7wKQwgPuQqXlBDMWRgso - 304 null text/css 184.3086ms
+2025-12-05 01:03:12.904 +03:00 [INF] ---> request /lib/jquery/dist/jquery.min.js returns 304
+2025-12-05 01:03:12.906 +03:00 [INF] ---> request /lib/bootstrap/dist/js/bootstrap.bundle.min.js returns 304
+2025-12-05 01:03:12.908 +03:00 [INF] ---> request /js/cart.js returns 304
+2025-12-05 01:03:12.909 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/_vs/browserLink - 200 null text/javascript; charset=UTF-8 105.5798ms
+2025-12-05 01:03:12.915 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7001/WebLabs_BSUIR_V02.styles.css, Response status code: 404
+2025-12-05 01:03:12.932 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/lib/jquery/dist/jquery.min.js - 304 null text/javascript 174.6871ms
+2025-12-05 01:03:12.934 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 304 null text/javascript 171.9456ms
+2025-12-05 01:03:12.935 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/js/cart.js - 304 null text/javascript 169.2648ms
+2025-12-05 01:03:21.252 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/Catalog - null null
+2025-12-05 01:03:21.260 +03:00 [INF] Executing endpoint 'WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko)'
+2025-12-05 01:03:21.274 +03:00 [INF] Route matched with {action = "Index", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, Int32) on controller WEB_353505_Horoshko.Controllers.ProductController (WEB_353505_Horoshko).
+2025-12-05 01:03:21.301 +03:00 [INF] Запрос к URL: https://localhost:7002/api//api/Book/category?pageNo=1&pageSize=3
+2025-12-05 01:03:21.305 +03:00 [INF] Start processing HTTP request GET https://localhost:7002/api/Book/category?*
+2025-12-05 01:03:21.308 +03:00 [INF] Sending HTTP request GET https://localhost:7002/api/Book/category?*
+2025-12-05 01:03:25.441 +03:00 [INF] HTTP request failed after 4129.3032ms
+System.Net.Http.HttpRequestException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение. (localhost:7002)
+ ---> System.Net.Sockets.SocketException (10061): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.SocketsHttpHandler.<SendAsync>g__CreateHandlerAndSendAsync|115_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2025-12-05 01:03:25.445 +03:00 [INF] HTTP request failed after 4141.4913ms
+System.Net.Http.HttpRequestException: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение. (localhost:7002)
+ ---> System.Net.Sockets.SocketException (10061): Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.SocketsHttpHandler.<SendAsync>g__CreateHandlerAndSendAsync|115_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+2025-12-05 01:03:25.488 +03:00 [ERR] Исключение: Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение. (localhost:7002)
+2025-12-05 01:03:25.494 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-12-05 01:03:25.497 +03:00 [INF] Executed action WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko) in 4219.3906ms
+2025-12-05 01:03:25.504 +03:00 [INF] Executed endpoint 'WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko)'
+2025-12-05 01:03:25.506 +03:00 [INF] ---> request /Catalog returns 404
+2025-12-05 01:03:25.508 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/Catalog - 404 null text/plain; charset=utf-8 4256.588ms

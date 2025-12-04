@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "WEB_353505_Horoshko.Blazor.SSR/1.0.0": {
+        "runtime": {
+          "WEB_353505_Horoshko.Blazor.SSR.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WEB_353505_Horoshko.Blazor.SSR/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
