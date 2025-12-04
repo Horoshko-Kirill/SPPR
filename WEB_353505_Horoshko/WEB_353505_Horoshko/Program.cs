@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
+using Serilog;
 using System.Security.Claims;
 using WEB_353505_Horoshko.API.Models;
 using WEB_353505_Horoshko.Domain.Help;
@@ -75,9 +76,14 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
+builder.Host.UseSerilog((ctx, lc) => lc
+    .ReadFrom.Configuration(ctx.Configuration)
+    .Enrich.FromLogContext()
+);
 
 var app = builder.Build();
 
+app.UseMiddleware<LoggingMiddleware>();
 
 if (!app.Environment.IsDevelopment())
 {

@@ -1,0 +1,230 @@
+2025-12-04 17:25:04.937 +03:00 [INF] User profile is available. Using 'C:\Users\kiril\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-04 17:25:05.711 +03:00 [INF] Now listening on: https://localhost:7001
+2025-12-04 17:25:05.719 +03:00 [INF] Now listening on: http://localhost:5001
+2025-12-04 17:25:05.818 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-04 17:25:05.821 +03:00 [INF] Hosting environment: Development
+2025-12-04 17:25:05.823 +03:00 [INF] Content root path: C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko
+2025-12-04 17:25:06.650 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/ - null null
+2025-12-04 17:25:06.986 +03:00 [INF] Executing endpoint 'WEB_353505_Horoshko.Controllers.HomeController.Index (WEB_353505_Horoshko)'
+2025-12-04 17:25:07.020 +03:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller WEB_353505_Horoshko.Controllers.HomeController (WEB_353505_Horoshko).
+2025-12-04 17:25:07.051 +03:00 [INF] Executing ViewResult, running view Index.
+2025-12-04 17:25:07.393 +03:00 [INF] Accessing expired session, Key:e4710eb9-5be8-89af-ebdf-af437f996a37
+2025-12-04 17:25:07.491 +03:00 [INF] Executed ViewResult - view Index executed in 446.2899ms.
+2025-12-04 17:25:07.503 +03:00 [INF] Executed action WEB_353505_Horoshko.Controllers.HomeController.Index (WEB_353505_Horoshko) in 478.3932ms
+2025-12-04 17:25:07.507 +03:00 [INF] Executed endpoint 'WEB_353505_Horoshko.Controllers.HomeController.Index (WEB_353505_Horoshko)'
+2025-12-04 17:25:07.508 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-04 17:25:07.508 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/lib/font-awesome/css/ all.min.css - null null
+2025-12-04 17:25:07.575 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/ - 200 null text/html; charset=utf-8 937.838ms
+2025-12-04 17:25:07.508 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/WebLabs_BSUIR_V02.styles.css - null null
+2025-12-04 17:25:07.548 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/js/site.js?v=L7UdMxknnWtXgkmz3xZMVU9_6IKVEyQ77uNgxlAO-_g - null null
+2025-12-04 17:25:07.555 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/js/cart.js - null null
+2025-12-04 17:25:07.584 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/_framework/aspnetcore-browser-refresh.js - 200 16523 application/javascript; charset=utf-8 76.4073ms
+2025-12-04 17:25:07.590 +03:00 [INF] ---> request /lib/font-awesome/css/%20all.min.css returns 404
+2025-12-04 17:25:07.601 +03:00 [INF] ---> request /WebLabs_BSUIR_V02.styles.css returns 404
+2025-12-04 17:25:07.607 +03:00 [INF] The file /js/cart.js was not modified
+2025-12-04 17:25:07.607 +03:00 [INF] The file /js/site.js was not modified
+2025-12-04 17:25:07.616 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/lib/font-awesome/css/ all.min.css - 404 0 null 108.7287ms
+2025-12-04 17:25:07.618 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/WebLabs_BSUIR_V02.styles.css - 404 0 null 110.4341ms
+2025-12-04 17:25:07.621 +03:00 [INF] ---> request /js/cart.js returns 304
+2025-12-04 17:25:07.623 +03:00 [INF] ---> request /js/site.js returns 304
+2025-12-04 17:25:07.624 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/_vs/browserLink - null null
+2025-12-04 17:25:07.631 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7001/lib/font-awesome/css/%20all.min.css, Response status code: 404
+2025-12-04 17:25:07.641 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7001/WebLabs_BSUIR_V02.styles.css, Response status code: 404
+2025-12-04 17:25:07.649 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/js/site.js?v=L7UdMxknnWtXgkmz3xZMVU9_6IKVEyQ77uNgxlAO-_g - 304 null text/javascript 100.7681ms
+2025-12-04 17:25:07.646 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/js/cart.js - 304 null text/javascript 91.0488ms
+2025-12-04 17:25:07.713 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/_vs/browserLink - 200 null text/javascript; charset=UTF-8 89.16ms
+2025-12-04 17:25:45.509 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/Catalog - null null
+2025-12-04 17:25:49.842 +03:00 [INF] Executing endpoint 'WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko)'
+2025-12-04 17:25:49.872 +03:00 [INF] Route matched with {action = "Index", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, Int32) on controller WEB_353505_Horoshko.Controllers.ProductController (WEB_353505_Horoshko).
+2025-12-04 17:25:49.923 +03:00 [INF] Запрос к URL: https://localhost:7002/api//api/Book/category?pageNo=1&pageSize=3
+2025-12-04 17:25:49.937 +03:00 [INF] Start processing HTTP request GET https://localhost:7002/api/Book/category?*
+2025-12-04 17:25:49.947 +03:00 [INF] Sending HTTP request GET https://localhost:7002/api/Book/category?*
+2025-12-04 17:25:51.329 +03:00 [INF] Received HTTP response headers after 1374.1607ms - 200
+2025-12-04 17:25:51.372 +03:00 [INF] End processing HTTP request after 1437.2187ms - 200
+2025-12-04 17:25:51.401 +03:00 [INF] Start processing HTTP request GET https://localhost:7002/api/Categories
+2025-12-04 17:25:51.409 +03:00 [INF] Sending HTTP request GET https://localhost:7002/api/Categories
+2025-12-04 17:25:51.527 +03:00 [INF] Received HTTP response headers after 110.542ms - 200
+2025-12-04 17:25:51.570 +03:00 [INF] End processing HTTP request after 168.6412ms - 200
+2025-12-04 17:25:51.620 +03:00 [INF] Executing ViewResult, running view Index.
+2025-12-04 17:25:51.642 +03:00 [INF] Accessing expired session, Key:e4710eb9-5be8-89af-ebdf-af437f996a37
+2025-12-04 17:25:51.650 +03:00 [INF] Executed ViewResult - view Index executed in 30.7143ms.
+2025-12-04 17:25:51.653 +03:00 [INF] Executed action WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko) in 1769.3463ms
+2025-12-04 17:25:51.657 +03:00 [INF] Executed endpoint 'WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko)'
+2025-12-04 17:25:51.661 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/Catalog - 200 null text/html; charset=utf-8 6152.4982ms
+2025-12-04 17:25:53.674 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/lib/font-awesome/css/ all.min.css - null null
+2025-12-04 17:25:53.674 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/WebLabs_BSUIR_V02.styles.css - null null
+2025-12-04 17:25:53.687 +03:00 [INF] ---> request /lib/font-awesome/css/%20all.min.css returns 404
+2025-12-04 17:25:53.694 +03:00 [INF] ---> request /WebLabs_BSUIR_V02.styles.css returns 404
+2025-12-04 17:25:53.695 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/lib/font-awesome/css/ all.min.css - 404 0 null 21.7132ms
+2025-12-04 17:25:53.698 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/WebLabs_BSUIR_V02.styles.css - 404 0 null 24.0962ms
+2025-12-04 17:25:53.700 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-04 17:25:53.701 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/_vs/browserLink - null null
+2025-12-04 17:25:53.715 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7001/lib/font-awesome/css/%20all.min.css, Response status code: 404
+2025-12-04 17:25:53.754 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/_framework/aspnetcore-browser-refresh.js - 200 16523 application/javascript; charset=utf-8 54.9045ms
+2025-12-04 17:25:53.738 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7001/WebLabs_BSUIR_V02.styles.css, Response status code: 404
+2025-12-04 17:25:53.790 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/_vs/browserLink - 200 null text/javascript; charset=UTF-8 88.6553ms
+2025-12-04 17:32:54.541 +03:00 [INF] User profile is available. Using 'C:\Users\kiril\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-12-04 17:32:54.840 +03:00 [INF] Now listening on: https://localhost:7001
+2025-12-04 17:32:54.841 +03:00 [INF] Now listening on: http://localhost:5001
+2025-12-04 17:32:54.872 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-12-04 17:32:54.876 +03:00 [INF] Hosting environment: Development
+2025-12-04 17:32:54.881 +03:00 [INF] Content root path: C:\Users\kiril\Desktop\SPPR\SPPR\WEB_353505_Horoshko\WEB_353505_Horoshko
+2025-12-04 17:32:56.383 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/ - null null
+2025-12-04 17:32:56.651 +03:00 [INF] Executing endpoint 'WEB_353505_Horoshko.Controllers.HomeController.Index (WEB_353505_Horoshko)'
+2025-12-04 17:32:56.687 +03:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller WEB_353505_Horoshko.Controllers.HomeController (WEB_353505_Horoshko).
+2025-12-04 17:32:56.712 +03:00 [INF] Executing ViewResult, running view Index.
+2025-12-04 17:32:56.919 +03:00 [INF] Accessing expired session, Key:e4710eb9-5be8-89af-ebdf-af437f996a37
+2025-12-04 17:32:56.970 +03:00 [INF] Executed ViewResult - view Index executed in 262.1291ms.
+2025-12-04 17:32:56.982 +03:00 [INF] Executed action WEB_353505_Horoshko.Controllers.HomeController.Index (WEB_353505_Horoshko) in 285.4243ms
+2025-12-04 17:32:56.989 +03:00 [INF] Executed endpoint 'WEB_353505_Horoshko.Controllers.HomeController.Index (WEB_353505_Horoshko)'
+2025-12-04 17:32:56.991 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/WebLabs_BSUIR_V02.styles.css - null null
+2025-12-04 17:32:56.991 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/lib/font-awesome/css/ all.min.css - null null
+2025-12-04 17:32:57.012 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/ - 200 null text/html; charset=utf-8 635.5203ms
+2025-12-04 17:32:57.002 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/_vs/browserLink - null null
+2025-12-04 17:32:56.991 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-04 17:32:57.022 +03:00 [INF] ---> request /WebLabs_BSUIR_V02.styles.css returns 404
+2025-12-04 17:32:57.029 +03:00 [INF] ---> request /lib/font-awesome/css/%20all.min.css returns 404
+2025-12-04 17:32:57.075 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/WebLabs_BSUIR_V02.styles.css - 404 0 null 83.8165ms
+2025-12-04 17:32:57.075 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/_framework/aspnetcore-browser-refresh.js - 200 16523 application/javascript; charset=utf-8 84.6023ms
+2025-12-04 17:32:57.080 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/lib/font-awesome/css/ all.min.css - 404 0 null 89.253ms
+2025-12-04 17:32:57.097 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7001/WebLabs_BSUIR_V02.styles.css, Response status code: 404
+2025-12-04 17:32:57.105 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/_vs/browserLink - 200 null text/javascript; charset=UTF-8 102.7974ms
+2025-12-04 17:32:57.123 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7001/lib/font-awesome/css/%20all.min.css, Response status code: 404
+2025-12-04 17:33:02.229 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/Catalog - null null
+2025-12-04 17:33:02.250 +03:00 [INF] Executing endpoint 'WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko)'
+2025-12-04 17:33:02.284 +03:00 [INF] Route matched with {action = "Index", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, Int32) on controller WEB_353505_Horoshko.Controllers.ProductController (WEB_353505_Horoshko).
+2025-12-04 17:33:02.328 +03:00 [INF] Запрос к URL: https://localhost:7002/api//api/Book/category?pageNo=1&pageSize=3
+2025-12-04 17:33:02.338 +03:00 [INF] Start processing HTTP request GET https://localhost:7002/api/Book/category?*
+2025-12-04 17:33:02.347 +03:00 [INF] Sending HTTP request GET https://localhost:7002/api/Book/category?*
+2025-12-04 17:33:03.717 +03:00 [INF] Received HTTP response headers after 1363.3585ms - 200
+2025-12-04 17:33:03.750 +03:00 [INF] End processing HTTP request after 1414.5488ms - 200
+2025-12-04 17:33:03.801 +03:00 [INF] Start processing HTTP request GET https://localhost:7002/api/Categories
+2025-12-04 17:33:03.807 +03:00 [INF] Sending HTTP request GET https://localhost:7002/api/Categories
+2025-12-04 17:33:03.954 +03:00 [INF] Received HTTP response headers after 141.8109ms - 200
+2025-12-04 17:33:03.960 +03:00 [INF] End processing HTTP request after 159.4707ms - 200
+2025-12-04 17:33:03.974 +03:00 [INF] Executing ViewResult, running view Index.
+2025-12-04 17:33:04.010 +03:00 [INF] Accessing expired session, Key:e4710eb9-5be8-89af-ebdf-af437f996a37
+2025-12-04 17:33:04.022 +03:00 [INF] Executed ViewResult - view Index executed in 48.3499ms.
+2025-12-04 17:33:04.029 +03:00 [INF] Executed action WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko) in 1734.6581ms
+2025-12-04 17:33:04.033 +03:00 [INF] Executed endpoint 'WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko)'
+2025-12-04 17:33:04.036 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/Catalog - 200 null text/html; charset=utf-8 1807.5659ms
+2025-12-04 17:33:04.102 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/lib/font-awesome/css/ all.min.css - null null
+2025-12-04 17:33:04.102 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/WebLabs_BSUIR_V02.styles.css - null null
+2025-12-04 17:33:04.104 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/_framework/aspnetcore-browser-refresh.js - null null
+2025-12-04 17:33:04.105 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/_vs/browserLink - null null
+2025-12-04 17:33:04.111 +03:00 [INF] ---> request /lib/font-awesome/css/%20all.min.css returns 404
+2025-12-04 17:33:04.128 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/_framework/aspnetcore-browser-refresh.js - 200 16523 application/javascript; charset=utf-8 23.9565ms
+2025-12-04 17:33:04.118 +03:00 [INF] ---> request /WebLabs_BSUIR_V02.styles.css returns 404
+2025-12-04 17:33:04.143 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/lib/font-awesome/css/ all.min.css - 404 0 null 40.5968ms
+2025-12-04 17:33:04.156 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/WebLabs_BSUIR_V02.styles.css - 404 0 null 53.6287ms
+2025-12-04 17:33:04.157 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.5276ms
+2025-12-04 17:33:04.172 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7001/lib/font-awesome/css/%20all.min.css, Response status code: 404
+2025-12-04 17:33:04.186 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7001/WebLabs_BSUIR_V02.styles.css, Response status code: 404
+2025-12-04 17:33:07.425 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/Catalog/sci-fi - null null
+2025-12-04 17:33:07.487 +03:00 [INF] Executing endpoint 'WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko)'
+2025-12-04 17:33:07.494 +03:00 [INF] Route matched with {action = "Index", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, Int32) on controller WEB_353505_Horoshko.Controllers.ProductController (WEB_353505_Horoshko).
+2025-12-04 17:33:07.504 +03:00 [INF] Запрос к URL: https://localhost:7002/api//api/Book/category/sci-fi?pageNo=1&pageSize=3
+2025-12-04 17:33:07.508 +03:00 [INF] Start processing HTTP request GET https://localhost:7002/api/Book/category/sci-fi?*
+2025-12-04 17:33:07.513 +03:00 [INF] Sending HTTP request GET https://localhost:7002/api/Book/category/sci-fi?*
+2025-12-04 17:33:07.594 +03:00 [INF] Received HTTP response headers after 79.6695ms - 200
+2025-12-04 17:33:07.616 +03:00 [INF] End processing HTTP request after 108.5192ms - 200
+2025-12-04 17:33:07.620 +03:00 [INF] Start processing HTTP request GET https://localhost:7002/api/Categories
+2025-12-04 17:33:07.622 +03:00 [INF] Sending HTTP request GET https://localhost:7002/api/Categories
+2025-12-04 17:33:07.632 +03:00 [INF] Received HTTP response headers after 8.1027ms - 200
+2025-12-04 17:33:07.634 +03:00 [INF] End processing HTTP request after 14.3007ms - 200
+2025-12-04 17:33:07.637 +03:00 [INF] Executing PartialViewResult, running view _BookListPartial.
+2025-12-04 17:33:07.641 +03:00 [INF] Executed PartialViewResult - view _BookListPartial executed in 4.2865ms.
+2025-12-04 17:33:07.643 +03:00 [INF] Executed action WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko) in 140.9762ms
+2025-12-04 17:33:07.644 +03:00 [INF] Executed endpoint 'WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko)'
+2025-12-04 17:33:07.649 +03:00 [WRN] Unable to configure Browser Link script injection on the response. 
+2025-12-04 17:33:07.650 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/Catalog/sci-fi - 200 null text/html; charset=utf-8 224.4753ms
+2025-12-04 17:33:09.826 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/Catalog - null null
+2025-12-04 17:33:09.850 +03:00 [INF] Executing endpoint 'WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko)'
+2025-12-04 17:33:09.856 +03:00 [INF] Route matched with {action = "Index", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, Int32) on controller WEB_353505_Horoshko.Controllers.ProductController (WEB_353505_Horoshko).
+2025-12-04 17:33:09.864 +03:00 [INF] Запрос к URL: https://localhost:7002/api//api/Book/category?pageNo=1&pageSize=3
+2025-12-04 17:33:09.868 +03:00 [INF] Start processing HTTP request GET https://localhost:7002/api/Book/category?*
+2025-12-04 17:33:09.871 +03:00 [INF] Sending HTTP request GET https://localhost:7002/api/Book/category?*
+2025-12-04 17:33:09.899 +03:00 [INF] Received HTTP response headers after 26.4248ms - 200
+2025-12-04 17:33:09.905 +03:00 [INF] End processing HTTP request after 36.7186ms - 200
+2025-12-04 17:33:09.908 +03:00 [INF] Start processing HTTP request GET https://localhost:7002/api/Categories
+2025-12-04 17:33:09.909 +03:00 [INF] Sending HTTP request GET https://localhost:7002/api/Categories
+2025-12-04 17:33:09.917 +03:00 [INF] Received HTTP response headers after 4.9512ms - 200
+2025-12-04 17:33:09.919 +03:00 [INF] End processing HTTP request after 11.3621ms - 200
+2025-12-04 17:33:09.921 +03:00 [INF] Executing PartialViewResult, running view _BookListPartial.
+2025-12-04 17:33:09.923 +03:00 [INF] Executed PartialViewResult - view _BookListPartial executed in 2.4255ms.
+2025-12-04 17:33:09.925 +03:00 [INF] Executed action WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko) in 62.1204ms
+2025-12-04 17:33:09.927 +03:00 [INF] Executed endpoint 'WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko)'
+2025-12-04 17:33:09.928 +03:00 [WRN] Unable to configure Browser Link script injection on the response. 
+2025-12-04 17:33:09.929 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/Catalog - 200 null text/html; charset=utf-8 102.9237ms
+2025-12-04 17:33:11.319 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/Catalog?pageNo=2 - null null
+2025-12-04 17:33:11.354 +03:00 [INF] Executing endpoint 'WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko)'
+2025-12-04 17:33:11.357 +03:00 [INF] Route matched with {action = "Index", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, Int32) on controller WEB_353505_Horoshko.Controllers.ProductController (WEB_353505_Horoshko).
+2025-12-04 17:33:11.370 +03:00 [INF] Запрос к URL: https://localhost:7002/api//api/Book/category?pageNo=2&pageSize=3
+2025-12-04 17:33:11.373 +03:00 [INF] Start processing HTTP request GET https://localhost:7002/api/Book/category?*
+2025-12-04 17:33:11.382 +03:00 [INF] Sending HTTP request GET https://localhost:7002/api/Book/category?*
+2025-12-04 17:33:11.456 +03:00 [INF] Received HTTP response headers after 69.0564ms - 200
+2025-12-04 17:33:11.465 +03:00 [INF] End processing HTTP request after 91.9019ms - 200
+2025-12-04 17:33:11.471 +03:00 [INF] Start processing HTTP request GET https://localhost:7002/api/Categories
+2025-12-04 17:33:11.479 +03:00 [INF] Sending HTTP request GET https://localhost:7002/api/Categories
+2025-12-04 17:33:11.489 +03:00 [INF] Received HTTP response headers after 8.1605ms - 200
+2025-12-04 17:33:11.492 +03:00 [INF] End processing HTTP request after 21.5663ms - 200
+2025-12-04 17:33:11.496 +03:00 [INF] Executing PartialViewResult, running view _BookListPartial.
+2025-12-04 17:33:11.500 +03:00 [INF] Executed PartialViewResult - view _BookListPartial executed in 4.5966ms.
+2025-12-04 17:33:11.504 +03:00 [INF] Executed action WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko) in 137.8987ms
+2025-12-04 17:33:11.506 +03:00 [INF] Executed endpoint 'WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko)'
+2025-12-04 17:33:11.508 +03:00 [WRN] Unable to configure Browser Link script injection on the response. 
+2025-12-04 17:33:11.511 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/Catalog?pageNo=2 - 200 null text/html; charset=utf-8 192.1516ms
+2025-12-04 17:33:12.919 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/Catalog?pageNo=1 - null null
+2025-12-04 17:33:12.972 +03:00 [INF] Executing endpoint 'WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko)'
+2025-12-04 17:33:12.996 +03:00 [INF] Route matched with {action = "Index", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, Int32) on controller WEB_353505_Horoshko.Controllers.ProductController (WEB_353505_Horoshko).
+2025-12-04 17:33:13.005 +03:00 [INF] Запрос к URL: https://localhost:7002/api//api/Book/category?pageNo=1&pageSize=3
+2025-12-04 17:33:13.010 +03:00 [INF] Start processing HTTP request GET https://localhost:7002/api/Book/category?*
+2025-12-04 17:33:13.015 +03:00 [INF] Sending HTTP request GET https://localhost:7002/api/Book/category?*
+2025-12-04 17:33:13.024 +03:00 [INF] Received HTTP response headers after 2.8852ms - 200
+2025-12-04 17:33:13.028 +03:00 [INF] End processing HTTP request after 18.1427ms - 200
+2025-12-04 17:33:13.032 +03:00 [INF] Start processing HTTP request GET https://localhost:7002/api/Categories
+2025-12-04 17:33:13.034 +03:00 [INF] Sending HTTP request GET https://localhost:7002/api/Categories
+2025-12-04 17:33:13.047 +03:00 [INF] Received HTTP response headers after 6.6967ms - 200
+2025-12-04 17:33:13.052 +03:00 [INF] End processing HTTP request after 19.9215ms - 200
+2025-12-04 17:33:13.057 +03:00 [INF] Executing PartialViewResult, running view _BookListPartial.
+2025-12-04 17:33:13.063 +03:00 [INF] Executed PartialViewResult - view _BookListPartial executed in 6.5185ms.
+2025-12-04 17:33:13.068 +03:00 [INF] Executed action WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko) in 64.374ms
+2025-12-04 17:33:13.073 +03:00 [INF] Executed endpoint 'WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko)'
+2025-12-04 17:33:13.077 +03:00 [WRN] Unable to configure Browser Link script injection on the response. 
+2025-12-04 17:33:13.079 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/Catalog?pageNo=1 - 200 null text/html; charset=utf-8 159.9685ms
+2025-12-04 17:33:14.445 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/Catalog?pageNo=2 - null null
+2025-12-04 17:33:14.455 +03:00 [INF] Executing endpoint 'WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko)'
+2025-12-04 17:33:14.456 +03:00 [INF] Route matched with {action = "Index", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, Int32) on controller WEB_353505_Horoshko.Controllers.ProductController (WEB_353505_Horoshko).
+2025-12-04 17:33:14.458 +03:00 [INF] Запрос к URL: https://localhost:7002/api//api/Book/category?pageNo=2&pageSize=3
+2025-12-04 17:33:14.460 +03:00 [INF] Start processing HTTP request GET https://localhost:7002/api/Book/category?*
+2025-12-04 17:33:14.461 +03:00 [INF] Sending HTTP request GET https://localhost:7002/api/Book/category?*
+2025-12-04 17:33:14.465 +03:00 [INF] Received HTTP response headers after 2.6874ms - 200
+2025-12-04 17:33:14.468 +03:00 [INF] End processing HTTP request after 8.9429ms - 200
+2025-12-04 17:33:14.470 +03:00 [INF] Start processing HTTP request GET https://localhost:7002/api/Categories
+2025-12-04 17:33:14.471 +03:00 [INF] Sending HTTP request GET https://localhost:7002/api/Categories
+2025-12-04 17:33:14.479 +03:00 [INF] Received HTTP response headers after 6.0536ms - 200
+2025-12-04 17:33:14.486 +03:00 [INF] End processing HTTP request after 16.228ms - 200
+2025-12-04 17:33:14.488 +03:00 [INF] Executing PartialViewResult, running view _BookListPartial.
+2025-12-04 17:33:14.491 +03:00 [INF] Executed PartialViewResult - view _BookListPartial executed in 2.1464ms.
+2025-12-04 17:33:14.493 +03:00 [INF] Executed action WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko) in 35.181ms
+2025-12-04 17:33:14.498 +03:00 [INF] Executed endpoint 'WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko)'
+2025-12-04 17:33:14.502 +03:00 [WRN] Unable to configure Browser Link script injection on the response. 
+2025-12-04 17:33:14.505 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/Catalog?pageNo=2 - 200 null text/html; charset=utf-8 59.9829ms
+2025-12-04 17:33:16.002 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7001/Catalog?pageNo=1 - null null
+2025-12-04 17:33:16.025 +03:00 [INF] Executing endpoint 'WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko)'
+2025-12-04 17:33:16.032 +03:00 [INF] Route matched with {action = "Index", controller = "Product", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, Int32) on controller WEB_353505_Horoshko.Controllers.ProductController (WEB_353505_Horoshko).
+2025-12-04 17:33:16.044 +03:00 [INF] Запрос к URL: https://localhost:7002/api//api/Book/category?pageNo=1&pageSize=3
+2025-12-04 17:33:16.049 +03:00 [INF] Start processing HTTP request GET https://localhost:7002/api/Book/category?*
+2025-12-04 17:33:16.058 +03:00 [INF] Sending HTTP request GET https://localhost:7002/api/Book/category?*
+2025-12-04 17:33:16.071 +03:00 [INF] Received HTTP response headers after 4.5147ms - 200
+2025-12-04 17:33:16.078 +03:00 [INF] End processing HTTP request after 28.8238ms - 200
+2025-12-04 17:33:16.087 +03:00 [INF] Start processing HTTP request GET https://localhost:7002/api/Categories
+2025-12-04 17:33:16.095 +03:00 [INF] Sending HTTP request GET https://localhost:7002/api/Categories
+2025-12-04 17:33:16.108 +03:00 [INF] Received HTTP response headers after 6.2945ms - 200
+2025-12-04 17:33:16.113 +03:00 [INF] End processing HTTP request after 25.8703ms - 200
+2025-12-04 17:33:16.119 +03:00 [INF] Executing PartialViewResult, running view _BookListPartial.
+2025-12-04 17:33:16.124 +03:00 [INF] Executed PartialViewResult - view _BookListPartial executed in 5.1146ms.
+2025-12-04 17:33:16.130 +03:00 [INF] Executed action WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko) in 86.571ms
+2025-12-04 17:33:16.133 +03:00 [INF] Executed endpoint 'WEB_353505_Horoshko.Controllers.ProductController.Index (WEB_353505_Horoshko)'
+2025-12-04 17:33:16.135 +03:00 [WRN] Unable to configure Browser Link script injection on the response. 
+2025-12-04 17:33:16.138 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7001/Catalog?pageNo=1 - 200 null text/html; charset=utf-8 136.4867ms
